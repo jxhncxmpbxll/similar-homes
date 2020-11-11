@@ -1,13 +1,12 @@
 # Project Name
 
-> Project description
+> A recreation of a Trulia Product Information Page
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/hrr49-fec07-stark/Photos
+  - https://github.com/hrr49-fec07-stark/Description-module
+  - https://github.com/hrr49-fec07-stark/tours
 
 ## Table of Contents
 
