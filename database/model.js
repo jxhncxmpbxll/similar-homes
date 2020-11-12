@@ -18,6 +18,6 @@ let similarHomesSchema = mongoose.Schema({
   img_url: String
 });
 
-let SimilarHome = mongoose.model('SimilarHome', repoSchema);
+let SimilarHome = mongoose.model('SimilarHome', similarHomesSchema);
 
 
