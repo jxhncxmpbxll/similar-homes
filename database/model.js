@@ -7,7 +7,6 @@ const db = mongoose.connection;
 
 const similarHomesSchema = new mongoose.Schema({
   unique_id: {type: String, index: true, unique: true, dropDups: true },
-  property_id: String,
   streetAddress: String,
   streetName: String,
   state: String,
