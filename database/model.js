@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/similar', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/similar', { useNewUrlParser: true })
+    .then(result => console.log('database connected!'))
+    .catch(err => console.log('database connection error ', err));
 
 const db = mongoose.connection;
 
-let similarHomesSchema = mongoose.Schema({
+const similarHomesSchema = new mongoose.Schema({
   unique_id: {type: String, index: true, unique: true, dropDups: true },
   property_id: String,
   streetAddress: String,

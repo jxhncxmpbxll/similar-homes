@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const db = require('../database/model.js');
-const dummyData = require(('../database/dummy_data.js');)
+const seed = require(('../database/seed.js');)
 const helpers = require('../helpers/realtor.js');
 
 const PORT = 3000;
