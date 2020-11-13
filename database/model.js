@@ -28,5 +28,10 @@ const save = (dataArr) => {
   SimilarHome.insertMany(dataArr);
 }
 
+const deleteAll = () => {
+  db.dropDatabase();
+}
+
 module.exports.save = save;
+module.exports.deleteAll = deleteAll;
 

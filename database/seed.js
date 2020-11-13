@@ -1,11 +1,11 @@
 const faker = require('faker');
-const db = require('../database/model.js');
+const db = require('./model.js');
 const dataFormat = require('../helpers/dataFormat.js');
 
 
 const populate = function() {
 
-  // db.dropDatabase();
+  db.deleteAll();
 
   const dummyData = [];
 
@@ -44,7 +44,7 @@ const populate = function() {
         bathrooms: Math.floor(Math.random() * 5),
         sqft: (Math.floor(Math.random() * (5,100 - 600) + 600)),
         publishDate: faker.date.past(1),
-        price: Math.random() * (2740000 - 150000) + 150000,
+        price: Math.floor(Math.random() * (2740000 - 150000) + 150000),
         img_url: images[Math.floor(Math.random() * (images.length))]
       }
     dummyData.push(fakeHome);
