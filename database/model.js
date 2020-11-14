@@ -32,6 +32,11 @@ const deleteAll = () => {
   db.dropDatabase();
 }
 
+const fetchHomes = () => {
+  return SimilarHome.find({}).limit(10);
+}
+
 module.exports.save = save;
 module.exports.deleteAll = deleteAll;
+module.exports.fetchHomes = fetchHomes;
 

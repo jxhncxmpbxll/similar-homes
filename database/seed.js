@@ -40,9 +40,9 @@ const populate = function() {
         zipcode: faker.address.zipCode(),
         neighborhood: neighborhoods[Math.floor(Math.random() * (neighborhoods.length))],
         city: cities[Math.floor(Math.random() * (cities.length - 1))],
-        bedrooms: Math.floor(Math.random() * 3),
-        bathrooms: Math.floor(Math.random() * 5),
-        sqft: (Math.floor(Math.random() * (5,100 - 600) + 600)),
+        bedrooms: Math.floor(Math.random() * (4 - 1) + 1),
+        bathrooms: Math.floor(Math.random() * (3 - 1) + 1),
+        sqft: Math.floor(Math.random() * (1400 - 500) + 500),
         publishDate: faker.date.past(1),
         price: Math.floor(Math.random() * (2740000 - 150000) + 150000),
         img_url: images[Math.floor(Math.random() * (images.length))]
