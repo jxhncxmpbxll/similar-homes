@@ -45,6 +45,7 @@ const populate = function() {
         sqft: Math.floor(Math.random() * (1400 - 500) + 500),
         publishDate: faker.date.past(1),
         price: Math.floor(Math.random() * (2740000 - 150000) + 150000),
+        priceReduction: faker.random.boolean(),
         img_url: images[Math.floor(Math.random() * (images.length))]
       }
     dummyData.push(fakeHome);

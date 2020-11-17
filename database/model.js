@@ -18,6 +18,7 @@ const similarHomesSchema = new mongoose.Schema({
   sqft: Number,
   publishDate: Date,
   price: Number,
+  priceReduction: Boolean,
   img_url: String
 });
 
@@ -39,4 +40,3 @@ const fetchHomes = () => {
 module.exports.save = save;
 module.exports.deleteAll = deleteAll;
 module.exports.fetchHomes = fetchHomes;
-
