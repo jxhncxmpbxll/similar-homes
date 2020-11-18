@@ -8,7 +8,6 @@ const db = mongoose.connection;
 const similarHomesSchema = new mongoose.Schema({
   unique_id: {type: String, index: true, unique: true, dropDups: true },
   streetAddress: String,
-  streetName: String,
   state: String,
   zipcode: String,
   neighborhood: String,
@@ -34,7 +33,7 @@ const deleteAll = () => {
 }
 
 const fetchHomes = () => {
-  return SimilarHome.find({}).limit(10);
+  return SimilarHome.find({}).limit(15);
 }
 
 module.exports.save = save;

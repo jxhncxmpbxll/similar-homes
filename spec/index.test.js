@@ -23,7 +23,6 @@ test('response objects should contain all expected keys', async (done) => {
   const sampleObj =   {
     "_id": "5fb34fef139c6029f4e12eaf",
     "streetAddress": "51659 Jenkins Mountain",
-    "streetName": "O'Kon Grove",
     "state": "The North",
     "zipcode": "68020",
     "neighborhood": "Hornwood",

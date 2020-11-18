@@ -35,8 +35,7 @@ const populate = function() {
 
       const fakeHome = {
         streetAddress: faker.address.streetAddress(),
-        streetName: faker.address.streetName(),
-        state: 'The North',
+        state: 'CA',
         zipcode: faker.address.zipCode(),
         neighborhood: neighborhoods[Math.floor(Math.random() * (neighborhoods.length))],
         city: cities[Math.floor(Math.random() * (cities.length - 1))],
