@@ -45,6 +45,7 @@ const populate = function() {
         publishDate: faker.date.past(1),
         price: Math.floor(Math.random() * (2740000 - 150000) + 150000),
         priceReduction: faker.random.boolean(),
+        onFavorites: false,
         img_url: images[Math.floor(Math.random() * (images.length))]
       }
     dummyData.push(fakeHome);

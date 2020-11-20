@@ -18,6 +18,7 @@ const similarHomesSchema = new mongoose.Schema({
   publishDate: Date,
   price: Number,
   priceReduction: Boolean,
+  onFavorites: Boolean,
   img_url: String
 });
 
@@ -36,6 +37,12 @@ const fetchHomes = () => {
   return SimilarHome.find({}).limit(15);
 }
 
+const addOrRemoveFavorite = (value) => {
+  return SimilarHome.findByIdAndUpdate(value._id, value.onFavorites);
+}
+
+
 module.exports.save = save;
 module.exports.deleteAll = deleteAll;
 module.exports.fetchHomes = fetchHomes;
+module.exports.addOrRemoveFavorite = addOrRemoveFavorite;

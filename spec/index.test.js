@@ -33,6 +33,7 @@ test('response objects should contain all expected keys', async (done) => {
     "publishDate": "2020-04-14T11:54:18.590Z",
     "price": 991899,
     "priceReduction": false,
+    "onFavorites": true,
     "img_url": "https://hrr49-fec.s3.us-east-2.amazonaws.com/images/erik-odiin-8L7GvIEJCi0-unsplash.jpg",
     "__v": 0
   }

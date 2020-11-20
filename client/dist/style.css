@@ -1,4 +1,151 @@
+
+
+.body {
+  font-family: TruliaSans, system, -apple-system, Roboto, "Segoe UI Bold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  overflow: hidden;
+}
+
+.similar-home {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 8px;
+}
+
 .sh-thumbnail {
-  max-height: 150px;
-  max-width: 200px;
+  object-fit: cover;
+  width: 224px;
+  height: 160px;
+  border-radius: 8px;
+}
+
+.sh-bbs-row {
+  display: flex;
+}
+
+.thumbnail-container {
+  width: 225px;
+  height: 161px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.sh-beds {
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.sh-city {
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sh-baths {
+  display: flex;
+  align-items: flex-end;
+}
+
+.sh-sqft {
+  display: flex;
+  align-items: flex-end;
+  padding: 0px 4px 0px 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.svg {
+  width: 20px;
+  height: 20px;
+}
+
+.svg-large {
+  width: 30px;
+  height: 30px;
+}
+
+.slider-btn {
+  border: none;
+  border-radius: 24px;
+  width: 25px;
+  background-color: rgb(255, 255, 255);
+}
+
+#goLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+#goRight {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.heart-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 8px;
+
+}
+
+.left-btn-container {
+  position: relative;
+  left: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 30px;
+  min-width: 32px;
+  margin-top: 2%;
+  border-radius: 100%;
+  border: 1px solid grey;
+  z-index: 1000;
+  background-color: white;
+}
+.right-btn-container {
+  position: relative;
+  right: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 30px;
+  min-width: 32px;
+  border-radius: 100%;
+  margin-top: 2%;
+  border: 1px solid grey;
+  z-index: 1000;
+  background-color: white;
+}
+.bucket {
+  width: 58%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+
+}
+.pics {
+  min-width: 100%;
+  overflow: auto;
+  padding: 1% 0;
+  white-space: nowrap;
+}
+.sh-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sh-slider {
+  display: flex;
 }

@@ -19,6 +19,15 @@ app.get('/api/similar-homes', (req, res) => {
   })
 })
 
+app.post('/api/similar-homes', (req, res) => {
+  db.addOrRemoveFavorite(req.body)
+  .then(result => res.status(400).send(result))
+  .catch(err => {
+    console.log(err);
+    res.status(400).send(err);
+  })
+})
+
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
