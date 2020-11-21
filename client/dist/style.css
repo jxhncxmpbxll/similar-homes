@@ -1,23 +1,36 @@
 
+@font-face{
+  font-family: "TruliaSans";
+  src: url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Regular.woff2") format("woff2"),
+  url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Regular.woff") format("woff");
+}
 
-.body {
-  font-family: TruliaSans, system, -apple-system, Roboto, "Segoe UI Bold", Arial, sans-serif;
+@font-face{
+  font-family: "TruliaSansBold";
+  src: url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Bold.woff2") format("woff2"),
+  url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Bold.woff") format("woff");
+}
+
+body {
+  font-family: "TruliaSans", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.1px;
-  overflow: hidden;
 }
+
+
 
 .similar-home {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   margin: 0 8px;
+  width: 22.7%
 }
 
 .sh-thumbnail {
   object-fit: cover;
-  width: 224px;
+  width: 100%;
   height: 160px;
   border-radius: 8px;
 }
@@ -26,24 +39,18 @@
   display: flex;
 }
 
-.thumbnail-container {
-  width: 225px;
-  height: 161px;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
+
 
 .sh-beds {
   display: flex;
   align-items: flex-end;
-
 }
 
 .sh-city {
   width: 90%;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 225px;
   overflow: hidden;
 }
 
@@ -94,16 +101,13 @@
   top: 0px;
   right: 0px;
   padding: 8px;
-
 }
 
 .left-btn-container {
-  position: relative;
-  left: 23px;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
   height: 30px;
   min-width: 32px;
   margin-top: 2%;
@@ -111,14 +115,15 @@
   border: 1px solid grey;
   z-index: 1000;
   background-color: white;
+  top: 32%;
 }
+
 .right-btn-container {
-  position: relative;
-  right: 22px;
+  position: absolute;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
   height: 30px;
   min-width: 32px;
   border-radius: 100%;
@@ -126,26 +131,41 @@
   border: 1px solid grey;
   z-index: 1000;
   background-color: white;
+  top: 32%;
 }
-.bucket {
+
+
+/* App level styles */
+
+.sh-main-container {
   width: 58%;
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-
-}
-.pics {
-  min-width: 100%;
-  overflow: auto;
-  padding: 1% 0;
-  white-space: nowrap;
-}
-.sh-container {
-  display: flex;
   flex-direction: column;
-  overflow: hidden;
+  margin: 0 auto;
 }
 
 .sh-slider {
   display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  overflow: auto; /* When ready, change this to hidden to remove scrolling functionality */
+  scrollbar-width: none;
 }
+.sh-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.titles {
+  font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+}
+
+
+.thumbnail-container {
+  height: 161px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+

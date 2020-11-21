@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewListingsNearRow = () => {
   return (
-    <div></div>
+    <div className="sh-slider"></div>
   )
 }
 

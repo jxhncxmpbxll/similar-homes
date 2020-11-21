@@ -1,6 +1,5 @@
 const faker = require('faker');
 const db = require('./model.js');
-const dataFormat = require('../helpers/dataFormat.js');
 
 
 const populate = function() {

@@ -5,7 +5,7 @@ jest.setTimeout(5000);
 
 
 test('should respond with an array of objects', async (done) => {
-  const res = await request(app).get('/api/similar');
+  const res = await request(app).get('/api/similar-homes');
   const response = JSON.parse(res.text);
   const allObjects = response.every((item)=> typeof item === 'object');
 
@@ -16,7 +16,7 @@ test('should respond with an array of objects', async (done) => {
 })
 
 test('response objects should contain all expected keys', async (done) => {
-  const res = await request(app).get('/api/similar');
+  const res = await request(app).get('/api/similar-homes');
   const response = JSON.parse(res.text);
   const responseKeys = Object.keys(response[0]);
 
@@ -40,10 +40,11 @@ test('response objects should contain all expected keys', async (done) => {
 
   const expected = Object.keys(sampleObj);
 
-
   expect(res.status).toBe(200);
   expect(responseKeys).toEqual(expected);
   done();
 })
+
+
 
 
