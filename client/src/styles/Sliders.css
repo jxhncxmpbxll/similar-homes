@@ -57,13 +57,13 @@
 }
 
 .one {
-    transform: translateX(0);
-    transition: transform 0.45s ease 0s;
+  transform: translateX(0);
+  transition: transform 0.45s ease 0s;
 }
 
 .two {
-    transform: translateX(-960px);
-    transition: transform 0.45s ease 0s;
+  transform: translateX(-960px);
+  transition: transform 0.45s ease 0s;
 }
 
 .three {
