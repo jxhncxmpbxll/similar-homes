@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import SimilarHomesSlider from './components/similarHomesSlider.jsx'
 import NewListingsNearSlider from './components/newListingsNearSlider.jsx'
-// import {left_arrow_icon, right_arrow_icon} from './utils/svg-icons.jsx'
+
+import style from './styles/app.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,12 +25,14 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.similarHomes);
+
     return (
-      <div className="sh-main-container">
-        <h3 className="titles">Similar Homes You May Like</h3>
+      <div className={style.mainContainer}>
+        <h3 className={style.titles}>Similar Homes You May Like</h3>
         <SimilarHomesSlider similarHomes={this.state.similarHomes}/>
 
-        <h3 className="titles">New Listings Near Address</h3>
+        <h3 className={style.titles}>New Listings Near Address</h3>
         <NewListingsNearSlider/>
       </div>
     )

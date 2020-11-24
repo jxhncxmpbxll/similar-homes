@@ -1,0 +1,12 @@
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 940px;
+  max-width: 960px;
+}
+
+.titles {
+  font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+}

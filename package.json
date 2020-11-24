@@ -27,8 +27,9 @@
     "mysql": "^2.14.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-scroll": "^1.8.1",
     "underscore": "^1.8.3",
-    "webpack": "^4.29.6",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.0"
   },
   "devDependencies": {

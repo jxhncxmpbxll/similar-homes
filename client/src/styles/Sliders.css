@@ -1,0 +1,96 @@
+.slider {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  overflow: auto;
+  transition: transform 0.45s ease 0s;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+ display: none;
+}
+
+.shContainer {
+  width: 100%;
+  height: 260px;
+  max-width: 960px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.leftBtn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  min-width: 32px;
+  margin-top: 2%;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 1px solid grey;
+  z-index: 1000;
+  background-color: white;
+  margin-bottom: 52px;
+}
+
+.rightBtn {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  min-width: 32px;
+  border-radius: 100%;
+  margin-top: 2%;
+  border: 1px solid grey;
+  z-index: 1000;
+  background-color: white;
+  margin-bottom: 52px;
+}
+
+.one {
+    transform: translateX(0);
+    transition: transform 0.45s ease 0s;
+}
+
+.two {
+    transform: translateX(-960px);
+    transition: transform 0.45s ease 0s;
+}
+
+.three {
+  transform: translateX(-1920px);
+  transition: transform 0.45s ease 0s;
+}
+
+.four {
+  transform: translateX(-2880px);
+  transition: transform 0.45s ease 0s;
+}
+
+.hide {
+  opacity: 0;
+  transition-delay: .5s;
+}
+
+.show {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+.seeMore {
+  height: 160px;
+  width: 224px;
+  display: block;
+  object-fit: cover;
+  background-color: lightgrey;
+  border-radius: 8px;
+}

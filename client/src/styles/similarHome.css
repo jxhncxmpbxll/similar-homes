@@ -1,0 +1,86 @@
+.similarHome {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 11px;
+  width: 22.7%
+}
+
+.thumbnailContainer {
+  height: 160px;
+  width: 224px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.heartContainer {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 8px;
+}
+
+.thumbnail {
+  object-fit: cover;
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+}
+
+.price {
+  font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  width: 100%
+}
+
+.bbs {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  -webkit-box-align: center;
+}
+
+
+.beds {
+  display: flex;
+  align-items: center;
+}
+
+.baths {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.sqft {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.city {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.one {
+  transform: translateX(0);
+  transition: transform 0.45s ease 0s;
+}
+
+.two {
+  transform: translateX(-960px);
+  transition: transform 0.45s ease 0s;
+}
+
+.three {
+  transform: translateX(-1920px);
+  transition: transform 0.45s ease 0s;
+}
+
+.four {
+  transform: translateX(-2880px);
+  transition: transform 0.45s ease 0s;
+}

@@ -16,7 +16,7 @@ const similarHomesSchema = new mongoose.Schema({
   bathrooms: Number,
   sqft: Number,
   publishDate: Date,
-  price: Number,
+  price: String,
   priceReduction: Boolean,
   onFavorites: Boolean,
   img_url: String
