@@ -1,6 +1,6 @@
 import React, {createRef} from 'react';
 
-import {left_arrow_icon, right_arrow_icon} from '../utils/svg-icons.jsx';
+import {left_arrow_icon, right_arrow_icon, sign_icon} from '../utils/svg-icons.jsx';
 import styles from '../styles/Sliders.css';
 
 import SimilarHome from './similarHome.jsx';
@@ -30,8 +30,8 @@ class SimilarHomesSlider extends React.Component {
 
   render() {
     const section = this.state.sections[this.state.currentSection];
-    const seeMoreStyle = [styles.seeMore, section].join(' ');
-    const seeMore = <div className={seeMoreStyle}>See More Homes For Sale In <p>CITY</p><button>Take a Look</button></div>;
+    const seeMoreStyle = [styles.seeMore, section, styles.similarHome, , styles.thumbnailContainer].join(' ');
+    const seeMore = <div className={seeMoreStyle}>{sign_icon} <div>See More Homes For Sale In</div><div><p>CITY</p></div><button className={styles.takeALookBtn}>Take a Look</button></div>;
 
     return (
       <div className={styles.shContainer}>

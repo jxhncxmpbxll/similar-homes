@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   max-width: 960px;
   overflow: auto;
@@ -87,10 +87,45 @@
 }
 
 .seeMore {
+  border: 1px solid rgb(232, 233, 234);
+  border-radius: 8px;
+  min-width: 224px;
+  padding: 8px;
+  height: 144px;
+  background-color: rgb(232, 233, 234);
+  overflow: hidden;
+}
+
+.similarHome {
+  display: flex;
+  flex-direction: column;
+  margin: 0 11px;
+  width: 22.7%
+}
+
+.thumbnailContainer {
   height: 160px;
   width: 224px;
   display: block;
-  object-fit: cover;
-  background-color: lightgrey;
-  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.takeALookBtn {
+    margin: 0px 0px 4px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    transition: top 0.1s ease 0s, box-shadow 0.1s ease 0s, border-color 0.1s ease 0s, background-color 0.1s ease 0s, color 0.1s ease 0s;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 8px 16px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 120, 130);
+    border-color: transparent;
 }

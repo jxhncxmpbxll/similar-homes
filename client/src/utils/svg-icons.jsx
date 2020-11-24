@@ -21,4 +21,4 @@ export const right_arrow_icon = (<svg className="svg" viewBox="0 0 32 32" xmlns=
 
 export const left_arrow_icon = (<svg className="svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M14.292 16.494l7.147 7.056-1.869 1.893-9.067-8.951 9.069-8.927 1.866 1.896z" fill="#869099"></path></svg>);
 
-export const sign_icon = (<svg class="svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9.75 9.766h17.985v9.03H9.749v-9.03zm-2.673-2.68v19.95h-2.66V4.427h23.318v2.66H7.077z" fill="#869099" fill-rule="evenodd"></path></svg>)
+export const sign_icon = (<svg class="svg" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9.75 9.766h17.985v9.03H9.749v-9.03zm-2.673-2.68v19.95h-2.66V4.427h23.318v2.66H7.077z" fill="#869099" fill-rule="evenodd"></path></svg>)
