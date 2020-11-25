@@ -19,9 +19,18 @@ app.get('/api/similar-homes', (req, res) => {
   })
 })
 
-app.post('/api/similar-homes', (req, res) => {
+app.post('/api/similar-homes/favorites', (req, res) => {
   db.addOrRemoveFavorite(req.body)
   .then(result => res.status(400).send(result))
+  .catch(err => {
+    console.log(err);
+    res.status(400).send(err);
+  })
+})
+
+app.get('/api/new-listings', (req, res) => {
+  db.fetchHomes()
+  .then(result => res.status(200).send(result))
   .catch(err => {
     console.log(err);
     res.status(400).send(err);

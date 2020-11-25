@@ -25,8 +25,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.similarHomes);
-
     return (
       <div className={style.mainContainer}>
         <h3 className={style.titles}>Similar Homes You May Like</h3>
