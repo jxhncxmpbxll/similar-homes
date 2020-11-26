@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 960px;
   overflow: auto;
-  transition: transform 0.45s ease 0s;
+  transition: transform 0.6s ease 0s;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
@@ -58,22 +58,22 @@
 
 .one {
   transform: translateX(0);
-  transition: transform 0.45s ease 0s;
+  transition: transform 0.6s ease 0s;
 }
 
 .two {
   transform: translateX(-960px);
-  transition: transform 0.45s ease 0s;
+  transition: transform 0.6s ease 0s;
 }
 
 .three {
   transform: translateX(-1920px);
-  transition: transform 0.45s ease 0s;
+  transition: transform 0.6s ease 0s;
 }
 
 .four {
   transform: translateX(-2880px);
-  transition: transform 0.45s ease 0s;
+  transition: transform 0.6s ease 0s;
 }
 
 .hide {
@@ -84,16 +84,6 @@
 .show {
   opacity: 1;
   transition-delay: .5s;
-}
-
-.seeMore {
-  border: 1px solid rgb(232, 233, 234);
-  border-radius: 8px;
-  min-width: 224px;
-  padding: 8px;
-  height: 144px;
-  background-color: rgb(232, 233, 234);
-  overflow: hidden;
 }
 
 .similarHome {
@@ -111,21 +101,47 @@
   overflow: hidden;
 }
 
+.seeMore {
+  border-radius: 8px;
+  min-width: 224px;
+  background-color: rgb(232, 233, 234);
+  overflow: hidden;
+}
+
+.signContainer {
+  margin: 9px;
+}
+
 .takeALookBtn {
-    margin: 0px 0px 4px;
-    border-radius: 8px;
-    border-width: 1px;
-    border-style: solid;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    font-weight: bold;
-    transition: top 0.1s ease 0s, box-shadow 0.1s ease 0s, border-color 0.1s ease 0s, background-color 0.1s ease 0s, color 0.1s ease 0s;
-    white-space: nowrap;
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 8px 16px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 120, 130);
-    border-color: transparent;
+  margin: 0px 0px 4px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: -9px 9px;
+  padding: 8px 16px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 120, 130);
+  border-color: transparent;
+  position: relative;
+}
+
+.bold {
+  font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  margin: 0px 9px;
+}
+
+.regular {
+  font-family: "TruliaSans", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  margin: 0px 9px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }

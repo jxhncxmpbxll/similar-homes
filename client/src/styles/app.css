@@ -1,4 +1,22 @@
 
+@font-face{
+  font-family: "TruliaSans";
+  src: url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Regular.woff2") format("woff2"),
+  url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Regular.woff") format("woff");
+}
+
+@font-face{
+  font-family: "TruliaSansBold";
+  src: url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Bold.woff2") format("woff2"),
+  url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Bold.woff") format("woff");
+}
+
+body {
+  font-family: "TruliaSans", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+}
+
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -9,4 +27,5 @@
 
 .titles {
   font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  font-size: 20px;
 }

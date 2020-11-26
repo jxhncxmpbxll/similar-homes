@@ -10,7 +10,9 @@ const populate = function() {
   const dummyData = [];
 
   const neighborhoods = ['Last Hearth', 'Crofter\'s Village', 'Hornwood', 'Wolfswood', 'Cerwyn'];
+
   const cities = ['Ramsgate', 'Dreadfort', 'Winterfell', 'White Harbor', 'Barrowton'];
+
   const images = [
     'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/designecologist-Ib_zdvEalGg-unsplash.jpg',
     'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/dillon-kydd-3Ignkeds3w8-unsplash.jpg',
@@ -31,6 +33,8 @@ const populate = function() {
     'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/zane-lee--tdnW2eErTM-unsplash.jpg'
   ]
 
+  const priceChanges = ['+', '-', 'x', 'y', 'z']
+
     for (let i = 0; i < 100; i++) {
 
       const fakeHome = {
@@ -43,8 +47,8 @@ const populate = function() {
         bathrooms: Math.floor(Math.random() * (3 - 1) + 1),
         sqft: Math.floor(Math.random() * (1400 - 500) + 500),
         publishDate: faker.date.past(1),
-        price: Math.floor(Math.random() * (2740000 - 150000) + 150000),
-        priceReduction: faker.random.boolean(),
+        price: dataFormat.formatPrice(Math.floor(Math.random() * (2740000 - 150000) + 150000)),
+        priceChange: priceChanges[Math.floor(Math.random() * (priceChanges.length - 1))],
         onFavorites: false,
         img_url: images[Math.floor(Math.random() * (images.length))]
       }
