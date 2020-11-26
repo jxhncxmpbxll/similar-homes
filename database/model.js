@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost/similar', { useNewUrlParser: true })
 const db = mongoose.connection;
 
 const similarHomesSchema = new mongoose.Schema({
-  unique_id: {type: String, index: true, unique: true, dropDups: true },
+  unique_id: {type: String, index: true, unique: true, sparse: true},
   streetAddress: String,
   state: String,
   zipcode: String,
