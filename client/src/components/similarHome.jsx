@@ -9,8 +9,7 @@ class SimilarHome extends React.Component {
 
     this.state = {
       scrollpoint: '',
-      sections: [styles.one, styles.two, styles.three, styles.four],
-      currentSection: this.state.sections[this.props.section]
+      sections: [styles.one, styles.two, styles.three, styles.four]
     }
   }
 
