@@ -16,7 +16,6 @@ class SimilarHome extends React.Component {
   render() {
     const section = this.props.section;
     const carousel = [styles.similarHome, this.state.sections[section]].join(' ');
-    console.log(carousel);
 
     return (
       <div className={carousel}>

@@ -4,6 +4,7 @@ import {left_arrow_icon, right_arrow_icon, sign_icon} from '../utils/svg-icons.j
 import styles from '../styles/Sliders.css';
 
 import SimilarHome from './similarHome.jsx';
+import SeeMore from './seeMore.jsx'
 
 
 class SimilarHomesSlider extends React.Component {
@@ -30,20 +31,19 @@ class SimilarHomesSlider extends React.Component {
 
   render() {
     const section = this.state.sections[this.state.currentSection];
-    const seeMoreStyle = [styles.seeMore, section, styles.similarHome, , styles.thumbnailContainer].join(' ');
-    const seeMore = <div className={seeMoreStyle}>{sign_icon} <div>See More Homes For Sale In</div><div><p>CITY</p></div><button className={styles.takeALookBtn}>Take a Look</button></div>;
+    const seeMoreStyle = [styles.seeMore, section, styles.similarHome, styles.thumbnailContainer].join(' ');
 
     return (
       <div className={styles.shContainer}>
         <div className={styles.leftBtn} onClick={()=> this.switchSectionLeft()}>{left_arrow_icon}</div>
         <div className={styles.slider}>
-          {this.props.similarHomes.map((home, index) => {
-            if (index === this.props.similarHomes.length - 1) {
-              return seeMore;
-            }
-            return <SimilarHome similarHome={home} key={index} section={this.state.currentSection}/>
-          })}
-
+          {this.props.similarHomes.map((home, index) =>
+            <SimilarHome similarHome={home} key={index} section={this.state.currentSection}/>
+          )}
+          <SeeMore
+            section={this.state.sections[this.state.currentSection]}
+            key={this.props.similarHomes.length}
+          />
         </div>
         <div className={styles.rightBtn} onClick={()=> this.switchSectionRight()}>{right_arrow_icon}</div>
 

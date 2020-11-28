@@ -1,0 +1,46 @@
+.seeMore {
+  border-radius: 8px;
+  height: 160px;
+  min-width: 224px;
+  margin: 0px 9px;
+  background-color: rgb(232, 233, 234);
+  overflow: hidden;
+}
+
+.signContainer {
+  padding: 5px;
+}
+
+.takeALookBtn {
+  margin: 0px 0px 4px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 9px;
+  padding: 8px 16px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 120, 130);
+  border-color: transparent;
+  position: relative;
+}
+
+.bold {
+  font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  margin: 0px 9px;
+}
+
+.regular {
+  font-family: "TruliaSans", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  margin: 0px 9px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}

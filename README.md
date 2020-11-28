@@ -16,7 +16,7 @@
 
 ## Usage
 
-> Some usage instructions
+> http://52.15.94.24:3001/
 
 ## Requirements
 
