@@ -12,7 +12,9 @@
     "start": "node server/index.js",
     "build": "webpack -d --watch",
     "seed": "node database/seed.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "production": "pm2 start server/index.js",
+    "login": "bash login.sh"
   },
   "dependencies": {
     "@babel/core": "^7.4.0",
@@ -23,6 +25,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "faker": "^5.1.0",
+    "jquery": "^3.5.1",
     "mongoose": "^5.10.13",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",

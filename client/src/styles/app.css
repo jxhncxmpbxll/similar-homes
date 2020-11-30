@@ -28,4 +28,5 @@ body {
 .titles {
   font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
   font-size: 20px;
+  margin-left: 11px;
 }

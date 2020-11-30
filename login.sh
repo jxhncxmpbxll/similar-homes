@@ -1,0 +1,1 @@
+ssh -i "fec-similar-homes.pem" ubuntu@ec2-52-15-94-24.us-east-2.compute.amazonaws.com

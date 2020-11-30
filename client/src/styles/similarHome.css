@@ -12,6 +12,7 @@
   width: 224px;
   display: block;
   position: relative;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -19,8 +20,13 @@
   object-fit: cover;
   width: 100%;
   height: 160px;
-  border-radius: 8px;
   cursor: pointer;
+}
+
+.thumbnail:hover {
+  transform: scale(1.2);
+  transition: all 0.45s ease;
+  border-radius: 8px;
 }
 
 .heartContainer {
@@ -29,13 +35,42 @@
   right: 0px;
   padding: 8px;
   cursor: pointer;
+  z-index: 100;
 }
 
+.new {
+  font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: rgb(5, 34, 134);
+  background-color: white;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 2px 4px;
+  margin: 8px;
+  cursor: default;
+  position: absolute;
+z-index: 100;
+}
+
+.priceRow {
+  display: flex;
+  margin-top: 5px;
+  align-content: center;
+}
 
 .price {
   font-family: "TruliaSansBold", system, -apple-system, Roboto, Segoe UI Bold, Arial, sans-serif;
-  width: 100%;
   font-size: 20px;
+  width: 100%;
+  margin-right: 8px;
+}
+
+.priceChange {
+  position: relative;
+  margin-top: 3px;
+  margin-right: 55%;
 }
 
 .bbs {
@@ -44,7 +79,6 @@
   align-items: center;
   -webkit-box-align: center;
 }
-
 
 .beds {
   display: flex;
@@ -68,24 +102,4 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-
-.one {
-  transform: translateX(0);
-  transition: transform 0.45s ease 0s;
-}
-
-.two {
-  transform: translateX(-960px);
-  transition: transform 0.45s ease 0s;
-}
-
-.three {
-  transform: translateX(-1920px);
-  transition: transform 0.45s ease 0s;
-}
-
-.four {
-  transform: translateX(-2880px);
-  transition: transform 0.45s ease 0s;
 }

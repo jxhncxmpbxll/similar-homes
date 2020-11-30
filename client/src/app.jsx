@@ -31,7 +31,7 @@ class App extends React.Component {
         <SimilarHomesSlider similarHomes={this.state.similarHomes}/>
 
         <h3 className={style.titles}>New Listings Near Address</h3>
-        <NewListingsNearSlider/>
+        <NewListingsNearSlider similarHomes={this.state.similarHomes}/>
       </div>
     )
   }
