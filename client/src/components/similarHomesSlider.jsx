@@ -10,23 +10,35 @@ import SeeMore from './seeMore.jsx'
 class SimilarHomesSlider extends React.Component {
   constructor(props) {
     super(props);
-
+    this.x = 0;
     this.state = {
+      left: 0,
       sections: [styles.one, styles.two, styles.three, styles.four],
       currentSection: 0
-    }
+    };
+    this.slider = React.createRef();
   }
 
-  switchSectionLeft() {
-    if (this.state.currentSection > 0) {
-      this.setState({currentSection: this.state.currentSection - 1})
-    }
-  }
+  goLeftPercent() {
+    return {transform: `translateX(${this.state.left}px)`, transition: 'transform 0.45s ease 0s' };
+  };
 
-  switchSectionRight() {
-    if (this.state.currentSection < 3) {
-      this.setState({currentSection: this.state.currentSection + 1})
+  goLeft() {
+    if (this.x + 960 <= 0) {
+      this.x += 960;
+      this.setState({ left: this.x });
     }
+  };
+
+  goRight() {
+    if (this.x - 960 >= -2880) {
+      this.x += -960;
+      this.setState({ left: this.x });
+    }
+  };
+
+  onSlide() {
+    this.x = this.slider.current.scrollLeft;
   }
 
   render() {
@@ -35,17 +47,22 @@ class SimilarHomesSlider extends React.Component {
 
     return (
       <div className={styles.shContainer}>
-        <div className={styles.leftBtn} onClick={()=> this.switchSectionLeft()}>{left_arrow_icon}</div>
-        <div className={styles.slider}>
-          {this.props.similarHomes.map((home, index) =>
-            <SimilarHome similarHome={home} key={index} section={this.state.currentSection}/>
-          )}
+        <div style={{visibility: `${this.x + 960 <= 0 ? 'visible' : 'hidden'}`}} className={styles.leftBtn} onClick={()=> this.goLeft()}>{left_arrow_icon}</div>
+        <div ref={this.slider} className={styles.slider} onScroll={()=> this.onSlide()}>
+          {this.props.similarHomes.map((home, index) => (
+            <SimilarHome
+              key={index}
+              similarHome={home}
+              section={this.state.currentSection}
+              slide={this.goLeftPercent()}/>
+          ))}
           <SeeMore
+            slide={this.goLeftPercent()}
             section={this.state.sections[this.state.currentSection]}
             key={this.props.similarHomes.length}
           />
         </div>
-        <div className={styles.rightBtn} onClick={()=> this.switchSectionRight()}>{right_arrow_icon}</div>
+        <div style={{visibility: `${this.x - 960 >= -2880 ? 'visible' : 'hidden'}`}} className={styles.rightBtn} onClick={()=> this.goRight()}>{right_arrow_icon}</div>
 
       </div>
     )

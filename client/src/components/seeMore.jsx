@@ -7,10 +7,10 @@ import styles from '../styles/seeMore.css';
 const SeeMore = (props) => {
 
   const section = props.section;
-  const seeMoreStyle = [styles.seeMore, section, styles.similarHome, styles.thumbnailContainer].join(' ');
+  const seeMoreStyle = [styles.seeMore, styles.similarHome, styles.thumbnailContainer].join(' ');
 
   return (
-    <div className={seeMoreStyle}>
+    <div className={seeMoreStyle} style={props.slide}>
       <div className={styles.signContainer}>{sign_icon}</div>
       <div className={styles.regular}>See More Homes For Sale In</div>
       <div className={styles.bold}>Winterfell</div>
