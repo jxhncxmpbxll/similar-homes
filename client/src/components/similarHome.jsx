@@ -9,9 +9,7 @@ class SimilarHome extends React.Component {
     super(props);
 
     this.state = {
-      scrollpoint: '',
-      references: [],
-      sections: [styles.one, styles.two, styles.three, styles.four],
+      value: ''
     }
     this.numDaysSincePublish.bind(this);
   }
@@ -26,8 +24,7 @@ class SimilarHome extends React.Component {
 
 
   render() {
-    const section = this.props.section;
-    const carousel = [styles.similarHome, this.props.slide].join(' ');
+
     const priceIncrease = this.props.similarHome.priceChange === '+' ? price_up_arrow : null;
     const priceDecrease = this.props.similarHome.priceChange === '-' ? price_down_arrow : null;
 
