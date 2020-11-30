@@ -11,7 +11,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      similarHomes: []
+      similarHomes: [],
+      newListings: []
     }
   }
 
@@ -20,6 +21,11 @@ class App extends React.Component {
     .then(data => data.data)
     .then(data => {
       this.setState({similarHomes: data});
+    })
+    axios.get('/api/new-listings')
+    .then(data => data.data)
+    .then(data => {
+      this.setState({newListings: data});
     })
     .catch(error => console.log(error))
   }
@@ -31,7 +37,7 @@ class App extends React.Component {
         <SimilarHomesSlider similarHomes={this.state.similarHomes}/>
 
         <h3 className={style.titles}>New Listings Near Address</h3>
-        <NewListingsNearSlider similarHomes={this.state.similarHomes}/>
+        <NewListingsNearSlider newListings={this.state.newListings}/>
       </div>
     )
   }

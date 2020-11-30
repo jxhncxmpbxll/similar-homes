@@ -33,8 +33,12 @@ const deleteAll = () => {
   db.dropDatabase();
 }
 
-const fetchHomes = () => {
+const fetchSimilarHomes = () => {
   return SimilarHome.find({}).limit(15);
+}
+
+const fetchNewListings = () => {
+  return SimilarHome.find({city: 'Ramsgate'}).limit(15);
 }
 
 const addOrRemoveFavorite = (value) => {
@@ -44,5 +48,6 @@ const addOrRemoveFavorite = (value) => {
 
 module.exports.save = save;
 module.exports.deleteAll = deleteAll;
-module.exports.fetchHomes = fetchHomes;
+module.exports.fetchSimilarHomes = fetchSimilarHomes;
+module.exports.fetchNewListings = fetchNewListings;
 module.exports.addOrRemoveFavorite = addOrRemoveFavorite;

@@ -3,7 +3,7 @@ import React, {createRef} from 'react';
 import {left_arrow_icon, right_arrow_icon, sign_icon} from '../utils/svg-icons.jsx';
 import styles from '../styles/Sliders.css';
 
-import SimilarHome from './similarHome.jsx';
+import NewListingNear from './newListingNear.jsx';
 import SeeMore from './seeMore.jsx'
 
 class NewListingsNearSlider extends React.Component{
@@ -11,9 +11,7 @@ class NewListingsNearSlider extends React.Component{
     super(props);
     this.x = 0;
     this.state = {
-      left: 0,
-      sections: [styles.one, styles.two, styles.three, styles.four],
-      currentSection: 0
+      left: 0
     };
     this.slider = React.createRef();
   }
@@ -41,24 +39,21 @@ class NewListingsNearSlider extends React.Component{
   }
 
   render() {
-    const section = this.state.sections[this.state.currentSection];
-    const seeMoreStyle = [styles.seeMore, section, styles.similarHome, styles.thumbnailContainer].join(' ');
+    const seeMoreStyle = [styles.seeMore, styles.similarHome, styles.thumbnailContainer].join(' ');
 
     return (
       <div className={styles.shContainer}>
         <div style={{visibility: `${this.x + 960 <= 0 ? 'visible' : 'hidden'}`}} className={styles.leftBtn} onClick={()=> this.goLeft()}>{left_arrow_icon}</div>
         <div ref={this.slider} className={styles.slider} onScroll={()=> this.onSlide()}>
-          {this.props.similarHomes.map((home, index) => (
-            <SimilarHome
+          {this.props.newListings.map((home, index) => (
+            <NewListingNear
               key={index}
-              similarHome={home}
-              section={this.state.currentSection}
+              newListing={home}
               slide={this.goLeftPercent()}/>
           ))}
           <SeeMore
             slide={this.goLeftPercent()}
-            section={this.state.sections[this.state.currentSection]}
-            key={this.props.similarHomes.length}
+            key={this.props.newListings.length}
           />
         </div>
         <div style={{visibility: `${this.x - 960 >= -2880 ? 'visible' : 'hidden'}`}} className={styles.rightBtn} onClick={()=> this.goRight()}>{right_arrow_icon}</div>

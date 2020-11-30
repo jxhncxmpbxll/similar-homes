@@ -13,11 +13,10 @@ class SimilarHomesSlider extends React.Component {
     this.x = 0;
     this.state = {
       left: 0,
-      sections: [styles.one, styles.two, styles.three, styles.four],
-      currentSection: 0
     };
     this.slider = React.createRef();
   }
+
 
   goLeftPercent() {
     return {transform: `translateX(${this.state.left}px)`, transition: 'transform 0.45s ease 0s' };
@@ -42,8 +41,7 @@ class SimilarHomesSlider extends React.Component {
   }
 
   render() {
-    const section = this.state.sections[this.state.currentSection];
-    const seeMoreStyle = [styles.seeMore, section, styles.similarHome, styles.thumbnailContainer].join(' ');
+    const seeMoreStyle = [styles.seeMore, styles.similarHome, styles.thumbnailContainer].join(' ');
 
     return (
       <div className={styles.shContainer}>
@@ -53,12 +51,10 @@ class SimilarHomesSlider extends React.Component {
             <SimilarHome
               key={index}
               similarHome={home}
-              section={this.state.currentSection}
               slide={this.goLeftPercent()}/>
           ))}
           <SeeMore
             slide={this.goLeftPercent()}
-            section={this.state.sections[this.state.currentSection]}
             key={this.props.similarHomes.length}
           />
         </div>
