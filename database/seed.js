@@ -14,23 +14,29 @@ const populate = function() {
   const cities = ['Ramsgate', 'Dreadfort', 'Winterfell', 'White Harbor', 'Barrowton'];
 
   const images = [
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/designecologist-Ib_zdvEalGg-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/dillon-kydd-3Ignkeds3w8-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/erik-odiin-8L7GvIEJCi0-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/fran-hogan-j9aikb6tv-M-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/francesca-tosolini-XcVm8mn7NUM-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/gustavo-zambelli-nEvzSXBIhiU-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/hulki-okan-tabak-Nh0BgsygqlQ-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/jessica-furtney-YOoucEImrKw-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/nicolas-gonzalez-QjuJaMH1rEc-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/pixasquare-4ojhpgKpS68-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/ronnie-george-z11gbBo13ro-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/stephen-leonardi-fFqqVSi96z0-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/taylor-simpson-_pFtAOXw38c-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/taylor-simpson-b1V49UCV3Jw-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/taylor-simpson-DnZ-TNBNyTI-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/taylor-simpson-jybWXT5mrlI-unsplash.jpg',
-    'https://hrr49-fec.s3.us-east-2.amazonaws.com/images/zane-lee--tdnW2eErTM-unsplash.jpg'
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/bernard-hermant-KqOLr8OiQLU-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/brett-jordan-Zjuvn60DXKg-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/brian-babb-XbwHrt87mQ0-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/designecologist-Ib_zdvEalGg-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/dillon-kydd-3Ignkeds3w8-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/erik-odiin-8L7GvIEJCi0-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/evan-dvorkin-YWDVrk4C6F0-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/fran-hogan-j9aikb6tv-M-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/francesca-tosolini-XcVm8mn7NUM-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/gustavo-zambelli-nEvzSXBIhiU-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/hulki-okan-tabak-Nh0BgsygqlQ-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/jessica-furtney-YOoucEImrKw-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/nicolas-gonzalez-QjuJaMH1rEc-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/pixasquare-4ojhpgKpS68-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/ronnie-george-z11gbBo13ro-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/stephen-leonardi-fFqqVSi96z0-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/stephen-leonardi-XKIO6ZgCObo-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/taylor-simpson-_pFtAOXw38c-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/taylor-simpson-b1V49UCV3Jw-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/taylor-simpson-DnZ-TNBNyTI-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/taylor-simpson-jybWXT5mrlI-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/zane-lee--tdnW2eErTM-unsplash.jpg',
+   'https://hrr49-fec.s3.us-east-2.amazonaws.com/zane-lee-ECsnJcc0Dhs-unsplash.jpg'
   ]
 
   const priceChanges = ['+', '-', 'x', 'y', 'z']
