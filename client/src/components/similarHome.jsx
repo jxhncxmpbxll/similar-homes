@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import {bed_icon, bath_icon, sqft_icon, price_down_arrow, price_up_arrow, heart_icon} from '../utils/svg-icons.jsx';
 import styles from '../styles/similarHome.css';
 
