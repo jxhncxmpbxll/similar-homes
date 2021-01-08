@@ -24,7 +24,6 @@ const similarHomesSchema = new mongoose.Schema({
 
 let SimilarHome = mongoose.model('SimilarHome', similarHomesSchema);
 
-
 const save = (dataArr) => {
   SimilarHome.insertMany(dataArr);
 }
