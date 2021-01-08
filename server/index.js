@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const db = require('../database/model.js');
 
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

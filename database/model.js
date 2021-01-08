@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/similar', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/similar', { useUnifiedTopology: true , useNewUrlParser: true })
     .then(result => console.log('database connected!'))
     .catch(err => console.log('database connection error ', err));
 
