@@ -1,6 +1,6 @@
 # Project Name
 
-> A recreation of a Trulia Product Information Page
+> A product information page for a Real Estate Application
 
 ## Related Projects
 
