@@ -14,9 +14,6 @@
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
-
-> http://52.15.94.24:3001/
 
 ## Requirements
 
